@@ -1,0 +1,201 @@
+@media (min-width: 1024px) {
+    /* Estilos para desktops */
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  /* Para telas médias (tablets) */
+  @media (max-width: 1024px) and (min-width: 600px) {
+    /* Estilos para tablets */
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Para telas pequenas (smartphones) */
+  @media (max-width: 599px) {
+    /* Estilos para smartphones */
+    body {
+      font-size: 12px;
+    }
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    position: relative; /* Adicionado para garantir que o fundo cubra toda a tela */
+    min-height: 100vh; /* Garante que a altura da página ocupe toda a tela */
+    cursor: none;
+    outline: none;
+}
+
+/* Estilo do fundo com gradiente e animação */
+.hero-background {
+    position: absolute; /* Faz o fundo ocupar toda a tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000000, #2a2a2a, #917005, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+
+/* Animação para o movimento suave do gradiente */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilos para o cabeçalho */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #FFD700;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Menu de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #333;
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Conteúdo principal */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+section h3, section h2 {
+    color: #FFD700;
+}
+
+section img {
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #FFD700;
+    border-radius: 5px;
+}
+
+/* Caixa de referência para sites */
+aside {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2b2b2b;
+    color: #FFD700;
+    border-radius: 8px;
+}
+
+aside h4 {
+    margin: 0;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1e1e1e;
+    color: #FFD700;
+    font-size: 0.9em;
+}
+
+/* Ajuste para elementos de parágrafo */
+p {
+    margin-bottom: 10px;
+}
+
+/* Estilo do cursor personalizado (espada do Viego) */
+.cursor {
+    position: absolute;
+    width: 60px; /* Tamanho da espada */
+    height: 60px;
+    background: url('Fotos/Espada%20do%20Viego.png') no-repeat center center; /* Substitua pela imagem da espada */
+    background-size: contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #69b6e3; /* Cor azul clara */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Criando a forma de losango */
+    pointer-events: none;
+    animation: particle-animation 1s forwards;
+    box-shadow: 0 0 10px rgba(105, 182, 227, 0.8); /* Brilho suave em volta das partículas */
+}
+
+/* Animação das partículas */
+@keyframes particle-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000; /* Cor dourada */
+    color: #ffffff; /* Cor de texto */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #ffcc00; /* Cor de fundo mais clara ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do botão levemente */
+  }
+  
+  .btn:active {
+    background-color: #ff9900; /* Cor de fundo mais escura ao clicar */
+    transform: scale(1.05); /* Leve redução de tamanho ao clicar */
+  }

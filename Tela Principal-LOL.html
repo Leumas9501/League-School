@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League School</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #000000; /* Fundo preto */
+            cursor: none; /* Remove o cursor padrão */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            color: #69b6e3; /* Cor azul para o título */
+            align-items: center; /* Centraliza horizontalmente */
+            border: 3px solid #FFD700; /* Bordas douradas mais finas */
+            position: relative; /* Necessário para os detalhes nos cantos */
+            padding: 10px;
+        }
+
+        /* Detalhes sofisticados nos cantos */
+        body::before,
+        body::after,
+        body::first-letter,
+        body::last-letter {
+            content: "";
+            position: absolute;
+            background-color: #FFD700;
+        }
+
+        /* Canto superior esquerdo */
+        body::before {
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-top: 5px solid #FFD700;
+            border-left: 5px solid #FFD700;
+            border-top-left-radius: 15px;
+            transform: rotate(-45deg);
+        }
+
+        /* Canto inferior esquerdo */
+        body::first-letter {
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-bottom: 5px solid #FFD700;
+            border-left: 5px solid #FFD700;
+            border-bottom-left-radius: 15px;
+            transform: rotate(45deg);
+        }
+
+        /* Canto superior direito */
+        body::after {
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border-top: 5px solid #FFD700;
+            border-right: 5px solid #FFD700;
+            border-top-right-radius: 15px;
+            transform: rotate(45deg);
+        }
+
+        /* Canto inferior direito */
+        body::last-letter {
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border-bottom: 5px solid #FFD700;
+            border-right: 5px solid #FFD700;
+            border-bottom-right-radius: 15px;
+            transform: rotate(-45deg);
+        }
+
+        /* Título da página */
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 120px;
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.8); /* Brilho dourado no título */
+            -webkit-background-clip: text;
+            background-clip: text;
+            padding: 10px;
+        }
+
+        /* Botões */
+        .button-container {
+            display: flex;
+            justify-content: space-evenly; /* Maior espaço entre as colunas */
+            width: 80%;
+            margin-top: 40px;
+            margin-left: 50px;
+        }
+
+        .button-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Maior separação entre os botões dentro da mesma coluna */
+            margin: 0 40px; /* Adiciona espaçamento lateral entre as colunas */
+        }
+
+        .button {
+            position: relative;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px 30px;
+            background-color: transparent;
+            color: #FFD700;
+            border: 2px solid #FFD700; /* Borda dourada */
+            border-radius: 8px;
+            text-align: center;
+            cursor: none; /* Remover o cursor padrão */
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .button:before, .button:after {
+            content: "";
+            position: absolute;
+            background-color: #FFD700;
+            transition: all 0.3s ease;
+        }
+
+        .button:before {
+            width: 4px;
+            height: 100%;
+            left: -8px;
+            top: 0;
+        }
+
+        .button:after {
+            height: 4px;
+            width: 100%;
+            bottom: -8px;
+            left: 0;
+        }
+
+        /* Estilo para quando o botão é pressionado */
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .button:hover:before, .button:hover:after {
+            width: 8px;
+            height: 8px;
+        }
+
+        /* Estilo do cursor personalizado (espada do Viego) */
+        .cursor {
+            position: absolute;
+            width: 60px; /* Tamanho da espada */
+            height: 60px;
+            background: url('Fotos/Espada%20do%20Viego.png') no-repeat center center; /* Substitua pela imagem da espada */
+            background-size: contain;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+        }
+
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #69b6e3; /* Cor azul clara */
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Criando a forma de losango */
+            pointer-events: none;
+            animation: particle-animation 1s forwards;
+            box-shadow: 0 0 10px rgba(105, 182, 227, 0.8); /* Brilho suave em volta das partículas */
+        }
+
+        /* Animação das partículas */
+        @keyframes particle-animation {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* Aumentando a separação entre o botão 1 e o botão 3 */
+        .button:nth-child(1) {
+            margin-bottom: 50px; /* Aumenta a separação do botão 1 */
+        }
+
+        /* Aumentando a separação entre o botão 2 e o botão 4 */
+        .button:nth-child(2) {
+            margin-bottom: 50px; /* Aumenta a separação do botão 2 */
+        }
+    </style>
+</head>
+<body>
+    <h1>League School</h1>
+
+    <div class="button-container">
+        <div class="button-column">
+            <!-- Botão 1 agora é um link -->
+            <a href="História-Lol.html">
+                <button class="button">História do League of Legends</button>
+            </a>
+            <!-- Botão 2 é um link -->
+            <a href="Conceitos Complexos.html">
+                <button class="button">Conceitos Complexos do League of Legends</button>
+            </a>
+        </div>
+        <div class="button-column">
+            <!-- Botão 3 é um link -->
+            <a href="Conceitos.html">
+                <button class="button">Conceitos Básicos do League of Legends</button>
+            </a>
+            <!-- Botão 4 é um link -->
+            <a href="Conceitos Complexos Part 2.html">
+                <button class="button">Conceitos Complexos do League of Legends, Parte 2</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Criando o cursor personalizado (espada do Viego)
+        const cursor = document.createElement("div");
+        cursor.classList.add("cursor");
+        document.body.appendChild(cursor);
+
+        // Função para atualizar a posição do cursor e gerar as partículas
+        document.addEventListener("mousemove", function (e) {
+            // Atualiza a posição da espada
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+
+            // Criando as partículas (essência azul estilo LoL) que saem do cabo da espada
+            let particle = document.createElement("div");
+            particle.classList.add("particle");
+
+            // Ajuste para as partículas saírem do cabo da espada
+            particle.style.left = `${e.pageX + 30}px`; // Ajuste horizontal para o centro da espada
+            particle.style.top = `${e.pageY + 18}px`; // Ajuste vertical para sair do cabo da espada (parte inferior)
+
+            document.body.appendChild(particle);
+
+            // Remover a partícula após a animação
+            setTimeout(() => {
+                particle.remove();
+            }, 1000); // Duração de 1 segundo
+        });
+    </script>
+</body>
+</html>

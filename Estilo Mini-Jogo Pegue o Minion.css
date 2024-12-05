@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Fotos/Summoner\'s\ Rift.jpg'); /* Substitua com a URL da imagem desejada */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#minion {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('Fotos/Minion\ LoL.png'); /* Substitua com a URL da imagem do minion */
+    background-size: cover;
+    cursor: pointer;
+    display: none; /* Inicialmente invisível */
+    transition: transform 0.2s ease;
+}
+
+#score {
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+}
+
+#combo {
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+}
+
+#timer {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hit {
+    animation: hitAnimation 0.2s ease-out;
+}
+
+.miss {
+    animation: missAnimation 0.2s ease-out;
+}
+
+@keyframes hitAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Estilo do cursor personalizado (espada do Viego) */
+.cursor {
+    position: absolute;
+    width: 60px; /* Tamanho da espada */
+    height: 60px;
+    background: url('Fotos/Espada%20do%20Viego.png') no-repeat center center; /* Substitua pela imagem da espada */
+    background-size: contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #69b6e3; /* Cor azul clara */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Criando a forma de losango */
+    pointer-events: none;
+    animation: particle-animation 1s forwards;
+    box-shadow: 0 0 10px rgba(105, 182, 227, 0.8); /* Brilho suave em volta das partículas */
+}
+
+/* Animação das partículas */
+@keyframes particle-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
