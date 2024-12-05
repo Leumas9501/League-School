@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Estilo 3 Sites.css">
+   <title>League School</title>
+  </head>
+<body>
+
+	<div class="hero-background"></div>
+
+    <script>
+        // Criando o cursor personalizado (espada do Viego)
+        const cursor = document.createElement("div");
+        cursor.classList.add("cursor");
+        document.body.appendChild(cursor);
+
+        // Função para atualizar a posição do cursor e gerar as partículas
+        document.addEventListener("mousemove", function (e) {
+            // Atualiza a posição da espada
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+
+            // Criando as partículas (essência azul estilo LoL) que saem do cabo da espada
+            let particle = document.createElement("div");
+            particle.classList.add("particle");
+
+            // Ajuste para as partículas saírem do cabo da espada
+            particle.style.left = `${e.pageX + 30}px`; // Ajuste horizontal para o centro da espada
+            particle.style.top = `${e.pageY + 18}px`; // Ajuste vertical para sair do cabo da espada (parte inferior)
+
+            document.body.appendChild(particle);
+
+            // Remover a partícula após a animação
+            setTimeout(() => {
+                particle.remove();
+            }, 1000); // Duração de 1 segundo
+        });
+    </script>
+
+<header>
+<h1>League School</h1>
+</header>
+
+<nav>
+<p></p>
+<a href="Tela Principal-LOL.html" class="btn" id="btn">Tela Principal</a>
+<p></p>
+</nav>
+
+<section>
+<p>Nesta página, iremos ver sobre mais algum conceitos complexos do Lol. Vamos Nessa !!</p>
+</br>
+<h2>Primeiro Conceito: Split Push</h2>
+<p>Split push é uma estratégia onde um jogador aplica pressão em uma lane sozinho, enquanto o resto do time se concentra em outras partes do mapa, provavelmente se concentrando para lutar por um objetivo ou por kills.</p>
+<p>O objetivo é dividir a atenção e os recursos do time adversário, forçando-os a lidar com múltiplas ameaças ao mesmo tempo. E isso pode acabar gerando uma grande vantagem na luta pela conquista de objetivos como torres, inibidores ou até o Barão Nashor.</p>
+<p>Geralmente, campeões que são bons nisso têm alta mobilidade ou capacidade de escapar, além de serem fortes em duelos e rápidos para derrubar torres.</p>
+<p>Observe aqui os pontos positivos e negativos do Split Push:</p>
+<table border="4"> 
+  <caption><h3><strong> Split Push </strong></h3></caption>
+  <thead>
+    <tr>
+      <th> Pontos Positivos </th>
+      <th> Pontos Negativos </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> Gera pressão na rota, forçando a equipe inimiga a se dividir </td>
+      <td> Gera um certo risco de morte para quem esta executando, e se essa pessoa morrer, pode resultar em desvantagem numérica para seu time</td>
+    </tr>
+    <tr>
+      <td> Pode acabar gerando uma vantagem numérica para sua equipe em lutas por objetivos os inibidores</td> 
+      <td> Requer uma boa comunicação e coordenação do time, pois sem esses dois o risco de morte da pessoa que esta realizando o split push é maior</td>
+    </tr>
+    <tr>
+      <td> Pode acabar garantindo a conquista de um inibidor ou objetivo, como um dragão</td>
+      <td> É necessária uma boa visão de mapa para a prevenção de emboscadas</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Não são todos os campeões que conseguem realizar o spit push</td>  
+    </tr>
+  </tbody>
+  <tfoot>
+  <tr><td colspan="3">Dito isso, tire um tempinho para estudar esta tabela, se não precisar, vamos continuar</td></tr>
+  </tfoot>
+  </table>
+</br>
+<h4>Resumindo:</h4>
+<ul><strong> . Visão do Mapa:</strong> Certifique-se de ter wards para detectar movimentos inimigos e evitar ser pego de surpresa.</ul>
+<ul><strong> . Comunicação:</strong> Avise seu time sobre suas intenções e peça para pressionarem outras áreas do mapa.</ul> 
+<img src="Fotos/Tryndamere.jpg"alt="Tryndamere" width=300 height=200 />
+<ul><strong> . Escolha do Campeão:</strong> Use campeões com boa mobilidade, clear wave, bons de dano para destruirem as torres rápido e capacidade de duelo, como Tryndamere e Jax.</ul>
+<ul><strong> . Timing:</strong> Aproveite quando tiver números vantajosos ou quando o time inimigo estiver ocupado com outros objetivos.</ul>
+<ul><strong> . Objetivos:</strong> Priorize torres e inibidores, mas esteja pronto para recuar se necessário.</ul>
+</br>
+<p>Lembre-se, o objetivo do split push não é apenas conseguir abates, mas pressionar o mapa e obter vantagens estratégicas. Pratique e comunique-se bem com seu time para melhorar suas chances de sucesso!</p>
+</br>
+</br>
+<h2>Segundo Conceito: Empurrar a rota</h2>
+<p>A estratégia de empurrar a rota no League of Legends envolve dominar as rotas inimigas e forçar o adversário a se defender constantemente. Aqui estão alguns pontos-chave:</p>
+<p><strong> . Uso de campeões:</strong> Escolha campeões com alta mobilidade e dano para limpar rapidamente as ondas de minions.</p>
+<p><strong> . Ataque às torres:</strong> Após limpar os minions, ataque as torres inimigas para ganhar controle do mapa.</p>
+<img src="Fotos/Ahri.jpg"alt="Ahri" width=300 height=200 />
+<p><strong> . Vantagem de ouro:</strong> Destruindo torres, você desbloqueia novas rotas e aumenta sua vantagem de ouro.</p>
+<p> Essa estratégia permite que você exerça pressão constante sobre o adversário, limitando suas opções e aumentando suas chances de vitória.</p>
+<p> Alguns campeões bons para isso são: A Ahri e os campeões da Top lane em geral, pois eles conseguem carregar ou absorver muito dano, ajudando a pressionar a rota.</p> 
+<p>Estude e treine este conceito um pouco, mas se não precisar, bora pro próximo !!</p>
+</br>
+</br>
+<h2>Terceiro Conceito: Compras de Itens</h2>
+<p>Saber comprar itens no league of legends é fundamental para o sucesso em partidas. Vamos observar isso detalhadamente.</p>
+<p>Avalie a composição inimiga e as necessidades da sua equipe para saber ou ter uma noção de que itens fazer na partida. Por exemplo:</p>
+<p>Se o time inimigo tiver muitos personagens que aguentam muito dano (tanks), você pode fazer itens que te dão armadura, caso você também seja um tank; ou pode fazer penetração de armadura caso esteja com um campeão focado em dano, como Master Yi, por exemplo.</p>  
+<p>Se o time inimigo tiver muitos campeões que dão dano mágico, você pode fazer resistência mágica, como Cimitarra Mercurial (que também da resistência a controle de grupo) ou Mandíbula de Malmortius.</p>
+<p>Alguns itens têm ativos poderosos (como Zhonya’s Hourglass ou até a Cimitarra Mercurial, citada anteriormente), então considere quando ativá-los.
+<p>Se necessário, reavalie seus itens conforme a partida avança. Às vezes, é necessário vender itens para se adaptar a novas situações</p>
+<p>Lembre-se de que a flexibilidade na construção é essencial para se adaptar às mudanças no jogo</p>
+</br>
+<p>Caso você fique em dúvida sobre oque fazer e quais estão sendo os melhores itens para aquele boneco, você pode pesquisar em sites como Blitz ou Porofessor, que te darão todo o kit de itens que estão sendo mais utiizados para aquele personagem no momento</p>
+<p>Às vezes, você precisará de itens específicos para lidar com situações únicas. Por exemplo:</p>
+<p><strong>. Anjo Guardião:</strong> para reviver após morrer.</p>
+<p><strong>. Faixa de Mercurio:</strong> para remover controle de grupo.</p>
+<p><strong>. Cronômetro:</strong> para evitar uma morte crucial.</p>
+<h4>Resumindo:</h4>
+<ul><strong>. Adapte os seus itens:</strong> Considere a composição do time inimigo.Por exemplo, se eles têm muito dano mágico, priorize resistência mágica</ul>
+<ul><strong>. Colete Estatísticas de Sites Diversos:</strong> Antes de escolher uma build, consulte sites e guias para ver as builds mais bem-sucedidas para o seu campeão.</ul>
+<ul><strong>. Planeje a Construção dos Seus Itens:</strong> Compre os componentes mais úteis para a sua situação e papel.</ul>
+<ul><strong>. Siga o Fluxo da Partida:</strong> Adapte sua build conforme o jogo progride. Se estiver atrás, priorize itens mais baratos e componentes. Se estiver à frente, invista em itens mais caros e poderosos. Se o time inimigo mudar a composição de itens deles, considere alterar também a sua.</ul>
+<ul><strong>. Situações Excepcionais:</strong> Às vezes, você precisará de itens específicos para lidar com situações únicas. Por exemplo: Anjo Guardião.</ul>
+</br>
+<p><strong>E este é o fim do site, espero que tenham gostado, com o passar do tempo irei atualizando e aprimorando o site para sempre o deixar atualizado; mas é isso. Até mais !!!</strong></p>
+</section>
+
+<aside>
+<h3>Visite Também:</h3>
+<p> </p>
+<h4>Andrômeda Eventos</h4>
+<p> </p>
+<h4>heets para Piano Virtual</h4>
+    
+<p>
+  <h4>Resumo de Livros</h4>
+</p>
+</aside>
+    
+<footer>
+DESENVOLVERDOR: Samuel Moreira Dias dos Reis
+</footer>
+    
+</body>
+</html>

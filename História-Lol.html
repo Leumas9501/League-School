@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Estilo 3 Sites.css">
+   <title>League School</title>
+</head>
+<body>
+
+    <div class="hero-background"></div>
+    <script>
+        // Criando o cursor personalizado (espada do Viego)
+        const cursor = document.createElement("div");
+        cursor.classList.add("cursor");
+        document.body.appendChild(cursor);
+
+        // Função para atualizar a posição do cursor e gerar as partículas
+        document.addEventListener("mousemove", function (e) {
+            // Atualiza a posição da espada
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+
+            // Criando as partículas (essência azul estilo LoL) que saem do cabo da espada
+            let particle = document.createElement("div");
+            particle.classList.add("particle");
+
+            // Ajuste para as partículas saírem do cabo da espada
+            particle.style.left = `${e.pageX + 30}px`; // Ajuste horizontal para o centro da espada
+            particle.style.top = `${e.pageY + 18}px`; // Ajuste vertical para sair do cabo da espada (parte inferior)
+
+            document.body.appendChild(particle);
+
+            // Remover a partícula após a animação
+            setTimeout(() => {
+                particle.remove();
+            }, 1000); // Duração de 1 segundo
+        });
+    
+    </script>
+
+<header>
+<h1>League School</h1>
+</header>
+
+<nav>
+<p></p>
+<a href="Tela Principal-LOL.html" class="btn" id="btn">Tela Principal</a>
+<p></p>
+</nav>
+
+<section>
+<h3>Esta página da internet se destina aos jogadores de League of Legends, mais conhecido como Lol, e tem como objetivo ensinar os jogadores estratégias de jogo que podem ser feitas,
+assim como builds para todos os campeões.
+<p></p>
+Iremos ensinar builds para todos os champs, como por exemplo Master Yi, Zed ou até Nautilus, se quiser;
+Também vamos ensinar estratégias de jogo como, o freezing e o Split Push que, são jogadas feitas para tanto para
+crescer e ficar forte no game quanto para não deixar o inimigo forte demais e acabar perdendo.
+Ensinaremos todas essas estratégias e muitas outras a seguir, então fique aqui no site e bora aprender!!!</h3>
+</br>
+<h3>Anter de começarmos a ver os conceitos do jogo e aprofundar neles, vamos ver um pouco da história do Lol, por exemplo como ele surgiu,
+o porque deste nome, porque o criaram, entre outros. Vamos lá?!</h3>
+</br>
+<h2>Pré-Lançamento</h2>
+<p>Os fundadores da Riot Games, Brandon Beck e Marc Merill, tiveram uma ideia de desenvolverem um sucessor espiritual de Defense of the Ancients (DotA).</p>
+<p>Sendo uma modificação (mod) para Warcraft III: Reign of Chaos, DotA exigia que os jogadores comprassem Warcraft III e instalassem um software personalizado; Brian Crecente, do The Washington Post, disse que o mod "carecia de um nível de polimento e era frequentemente difícil de ser encontrado e configurado".</p>
+<p>Phillip Kollar, da Polygon, observou que a Blizzard Entertainment ofereceu suporte a Warcraft III com um pacote de expansão, então mudou seu foco para outros projetos enquanto o jogo ainda possuía jogadores.</p>
+<p>Beck e Merill procuraram criar um jogo que tivesse suporte por um período significativamente mais longo. Então eles realizaram um torneio de DotA para alunos da Universidade do Sul da Califórnia, com o objetivo de recrutá-los posteriormente.</p>
+<p>Lá, eles conheceram Jeff Jew, mais tarde produtor de League of Legends. Jew estava muito familiarizado com Dota e passava grande parte do torneio ensinando os outros a jogar.</p>
+<p>Beck e Merill o convidaram para uma entrevista, e ele se juntou à Riot Games como estagiário. Beck e Merill recrutaram duas figuras envolvidas com DotA: Steve Feak, um de seus designers, e Steve Mescon, que dirigia um site de suporte aos jogadores.</p>
+<p>Feak disse que o desenvolvimento inicial foi altamente iterativo, comparando-o ao design de DotA.</p>
+</br>
+<p>Uma demonstração de League of Legends, construída no motor de jogo de Warcraft III, foi concluída em quatro meses e depois apresentada na Game Developers Conference de 2007. Lá, Beck e Merill tiveram pouco sucesso com investidores em potencial. As editoras ficaram confusas com o modelo de negócios free-to-play ("gratuito para jogar") do jogo e a falta de um modo para um jogador.</p>
+<p> O modelo free-to-play não foi testado fora dos mercados asiáticos, então as editoras estavam interessadas principalmente em um lançamento de varejo e na capacidade do jogo de ter uma sequência.</p>
+<p>Em 2008, a Riot chegou a um acordo com a Tencent para supervisionar o lançamento do jogo na China.</p>
+</br>
+<img src="Fotos/Master Yi.jpg"alt="Master Yi" width=400 height=300 />
+<p>League of Legends foi anunciado em 7 de outubro de 2008, para Microsoft Windows.</p>
+<p>O teste beta fechado começou em abril de 2009. Após o lançamento da beta, dezessete campeões estavam disponíveis. A Riot inicialmente pretendia lançar o jogo com vinte campeões, mas dobrou o número antes de seu lançamento completo na América do Norte em 27 de outubro de 2009.</p>
+<p>O título completo do jogo foi anunciado como League of Legends: Clash of Fates; a Riot planejava usar o subtítulo para sinalizar quando um conteúdo futuro estivesse disponível, mas decidiu que isso era algo desnecessário e descartou a ideia antes do lançamento.</p>
+<p>Embora disponível apenas para Microsoft Windows no lançamento, uma versão do jogo para MacOS foi lançada em março de 2013.</p>
+</br>
+</br>
+<h2>Conceitos básicos do League of Legends</h2>
+<p>LoL é um MOBA (Multiplayer Online Battle Arena), um gênero em que duas equipes de 5 jogadores enfrentam-se para destruir a base inimiga</p>
+<p>O mapa é dividido em três rotas(topo, meio e bot) e uma selva (jg), cada rota contém <strong>torres e inibidores</strong> que precisam ser destruídos para chegar ao nexus inimigo. A equipe que destruir o nexus da equipe inimiga primeiro vence</p>
+<p>(Outros MOBAs populares incluem DotA, Smite e Heroes of Newerth).</p>
+<p>Existem mais de 150 campeões no jogo, cada um com a sua história e habilidades,</p>
+<p>que se enquadram em categorias como Assassino, Mago, Lutador, Tanque, Suporte e Atirador</p>
+</br>
+<p>Durante a partida, você pode comprar itens, como Lâmina da Fúria de Guinso ou Coletora para fortalecer seu campeão. Itens oferecem vantagens como aumento de dano, resistência ou habilidades especiais</p>
+<p>Cada campeão tem quatro habilidades únicas (Q, W, E e R). Essas habilidades variam de acordo com o campeão e podem ser usadas para atacar, se defender ou apoiar a equipe, além de que o tempo de recarga de cada habilidade pode variar conforme a habilidade e o campeão</p>
+<p>Além das partidas normais, há partidas ranqueadas. Elas servem para testar sua habilidade e aumentar seu Elo (colocação no jogo), que varia de Ferro a Desafiante/Challenger</p>
+<p>O jogo também contém um sistema de comunicação, que se trata de um chat e pings(é como se fosse uma sinalização, uma indicação, que você faz para o seu time). Saber utiliza-lo é fundamental para a diversas ocasiões, como montar estratégias para emboscar os inimigos ou para alertar algum de seus companheiros sobre uma possível emboscada inimiga </p>
+<h2>Série de Televisão</h2>
+<img src="Fotos/Imagem Arcane.jpg"alt="Arcane" width=300 height=200 />
+<p>Em um vídeo postado para comemorar o décimo aniversário de League of Legends, a Riot anunciou uma série de televisão animada, intitulada Arcane, a primeira produção da empresa para a televisão.</p>
+<p>Arcane foi um esforço colaborativo entre a Riot Games e o estúdio de animação Fortiche Productions. Em uma entrevista ao The Hollywood Reporter, o chefe de desenvolvimento criativo Greg Street disse que a série "não é um show alegre. Existem alguns temas sérios que exploramos lá, então não queremos que as crianças sintam e esperem algo que não é."</p>
+<p>A série é ambientada na cidade utópica de Piltover e sua cidade irmã subterrânea e oprimida, Zaun. Foi programada para ser lançada em 2020, mas foi adiada por causa da pandemia de COVID-19. Em 6 de novembro de 2021, Arcane estreou na Netflix após o Campeonato Mundial de League of Legends de 2021, e esteve disponível através da Tencent Video na China.</p>
+<p> A série foi aclamada pela crítica após o seu lançamento, com Rafael Motomayor, da IGN, perguntando-se retoricamente se a série havia marcado o fim da "maldição da adaptação de jogos eletrônicos". É estrelada por Hailee Steinfeld como Vi, Ella Purnell como Jinx, Kevin Alejandro como Jayce, e Katie Leung como Caitlyn. Após o final da primeira temporada, a Netflix anunciou que uma segunda temporada está em desenvolvimento e será lançada em novembro deste ano.</p>
+</br>
+</br>
+<p><strong>A seguir, vamos ver alguns conceitos um pouco mais aprofundados no jogo. Vamos lá?!</strong></p>
+</section>
+
+<aside>
+<h3>Visite Também:</h3>
+<p> </p>
+<h4>Andrômeda Eventos</h4>
+<p> </p>
+<h4>Sheets para Piano Virtual</h4> 
+<p> </p>
+<h4>Resumo de Livros</h4>
+<p> </p>
+</aside>
+    
+<footer>
+DESENVOLVERDOR: Samuel Moreira Dias dos Reis
+</footer>
+    
+</body>
+</html>

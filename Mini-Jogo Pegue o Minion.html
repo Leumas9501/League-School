@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Jogo Pegue o Minion</title>
+    <link rel="stylesheet" href="Estilo Mini-Jogo Pegue o Minion.css"> <!-- Link para o CSS externo -->
+    <style>
+        /* Estilizando os botões com a classe .btn */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000000; /* Cor preta/dourada */
+            color: #ffffff; /* Cor de texto */
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ffcc00; /* Cor de fundo mais clara ao passar o mouse */
+            transform: scale(1.1); /* Aumenta o tamanho do botão levemente */
+        }
+
+        .btn:active {
+            background-color: #ff9900; /* Cor de fundo mais escura ao clicar */
+            transform: scale(1.05); /* Leve redução de tamanho ao clicar */
+        }
+
+        #game-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="minion"></div>
+        <div id="score">Pontuação: 0</div>
+        <div id="combo">Combo: 0</div>
+        <div id="timer">Tempo: 30s</div>
+    </div>
+
+    <!-- Botões com a classe .btn -->
+    <button class="btn" onclick="iniciarJogo()">Iniciar Jogo</button>
+    <button class="btn" onclick="pararJogo()">Parar Jogo</button>
+    <button class="btn" onclick="redirecionarParaConceitos()">Voltar aos Conceitos Básicos</button>
+
+    <script>
+        let score = 0;
+        let combo = 0;
+        let timeLeft = 30;
+        let minion = document.getElementById('minion');
+        let scoreDisplay = document.getElementById('score');
+        let comboDisplay = document.getElementById('combo');
+        let timerDisplay = document.getElementById('timer');
+        let gameTimer;
+        let minionTimer;
+        let difficulty = 1; // Aumenta com o tempo
+        let hitSound = new Audio('https://example.com/hit-sound.mp3'); // Substitua com o link de seu som
+        let missSound = new Audio('https://example.com/miss-sound.mp3'); // Substitua com o link de seu som
+
+        function iniciarJogo() {
+            score = 0;
+            combo = 0;
+            timeLeft = 30;
+            difficulty = 1;
+            scoreDisplay.textContent = `Pontuação: ${score}`;
+            comboDisplay.textContent = `Combo: ${combo}`;
+            timerDisplay.textContent = `Tempo: ${timeLeft}s`;
+
+            minion.style.display = 'none'; // Inicialmente escondido
+            clearInterval(gameTimer);
+            clearInterval(minionTimer);
+
+            gameTimer = setInterval(function() {
+                if (timeLeft <= 0) {
+                    pararJogo(); // Para o jogo quando o tempo acabar
+                    alert('Fim de Jogo! Sua pontuação foi: ' + score);
+                } else {
+                    timeLeft--;
+                    timerDisplay.textContent = `Tempo: ${timeLeft}s`;
+                    if (timeLeft % 10 === 0 && difficulty < 5) {
+                        difficulty++; // Aumenta a dificuldade a cada 10 segundos
+                    }
+                }
+            }, 1000);
+
+            mostrarMinion();
+        }
+
+        function mostrarMinion() {
+            minion.style.display = 'block';
+
+            let minionPositionX = Math.random() * (window.innerWidth - 100);
+            let minionPositionY = Math.random() * (window.innerHeight - 100);
+            minion.style.left = `${minionPositionX}px`;
+            minion.style.top = `${minionPositionY}px`;
+
+            let minionTime = Math.floor(Math.random() * difficulty) + 1;
+
+            minionTimer = setTimeout(function() {
+                if (minion.style.display === 'block') {
+                    missSound.play();
+                    minion.classList.add('miss');
+                    setTimeout(() => minion.classList.remove('miss'), 200);
+                    minion.style.display = 'none';
+                    mostrarMinion();
+                }
+            }, minionTime * 1000);
+
+            minion.onclick = function() {
+                if (minion.style.display === 'block') {
+                    score += difficulty;
+                    combo++;
+                    scoreDisplay.textContent = `Pontuação: ${score}`;
+                    comboDisplay.textContent = `Combo: ${combo}`;
+                    hitSound.play();
+                    minion.classList.add('hit');
+                    setTimeout(() => minion.classList.remove('hit'), 200);
+                    minion.style.display = 'none';
+                    clearTimeout(minionTimer);
+                    mostrarMinion();
+                }
+            };
+        }
+
+        function pararJogo() {
+            clearInterval(gameTimer); // Para o temporizador do jogo
+            clearTimeout(minionTimer); // Para o temporizador do minion
+            minion.style.display = 'none'; // Esconde o minion
+            alert('Jogo Parado! Sua pontuação foi: ' + score); // Alerta o jogador com a pontuação atual
+        }
+
+        // Função para redirecionar para a tela de conceitos básicos
+        function redirecionarParaConceitos() {
+            window.location.href = "Conceitos.html"; // Substitua com o caminho correto da sua página de conceitos básicos
+        }
+
+        // Cursor personalizado e partículas
+        const cursor = document.createElement("div");
+        cursor.classList.add("cursor");
+        document.body.appendChild(cursor);
+
+        document.addEventListener("mousemove", function (e) {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+
+            let particle = document.createElement("div");
+            particle.classList.add("particle");
+
+            particle.style.left = `${e.pageX + 30}px`;
+            particle.style.top = `${e.pageY + 18}px`;
+
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);
+        });
+
+        const audio = new Audio('sons/hover-sound.mp3');
+        const btn = document.getElementById('btn');
+        btn.addEventListener('mouseover', () => {
+            audio.play();
+        });
+    </script>
+
+</body>
+</html>

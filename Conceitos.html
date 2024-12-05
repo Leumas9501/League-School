@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Estilo 3 Sites.css">
+   <title>League School</title>
+  </head>
+<body>
+
+	<div class="hero-background"></div>
+
+    <script>
+        // Criando o cursor personalizado (espada do Viego)
+        const cursor = document.createElement("div");
+        cursor.classList.add("cursor");
+        document.body.appendChild(cursor);
+
+        // Função para atualizar a posição do cursor e gerar as partículas
+        document.addEventListener("mousemove", function (e) {
+            // Atualiza a posição da espada
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+
+            // Criando as partículas (essência azul estilo LoL) que saem do cabo da espada
+            let particle = document.createElement("div");
+            particle.classList.add("particle");
+
+            // Ajuste para as partículas saírem do cabo da espada
+            particle.style.left = `${e.pageX + 30}px`; // Ajuste horizontal para o centro da espada
+            particle.style.top = `${e.pageY + 18}px`; // Ajuste vertical para sair do cabo da espada (parte inferior)
+
+            document.body.appendChild(particle);
+
+            // Remover a partícula após a animação
+            setTimeout(() => {
+                particle.remove();
+            }, 1000); // Duração de 1 segundo
+        });
+    </script>
+
+<header>
+<h1>League School</h1>
+</header>
+
+<nav>
+<p></p>
+<a href="Tela Principal-LOL.html" class="btn" id="btn">Tela Principal</a>
+<p></p>
+<a href="Mini-Jogo Pegue o Minion.html" class="btn" id="btn">Mini-Jogo Pegue o Minion</a>
+</nav>
+
+
+<section>
+<h2>Preferências de jogo</h2>
+<img src="Fotos/Rakan.jpg"alt="Rakan" width=200 height=200 />
+<p>Pense no que mais gosta no LoL. Gosta de combates diretos? Estratégia e visão de jogo? Ou prefere suporte e trabalho em equipe? Suas preferências podem indicar a rota ideal.</p>
+<p>Cada rota tem campeões típicos que se encaixam bem nela. Por Exemplo:
+<ul>Top Lane (Rota Superior): É conhecida como uma “ilha” devido ao isolamento em relação ao resto do mapa. Tradicionalmente ocupada por campeões tanques ou lutadores, como Darius e Garem.</ul>
+<ul>Jungle (Selva): O jungler percorre a selva, coletando recursos, auxiliando as rotas através de ganks e controlando os objetivos do mapa.Alguns exemplos de jungler são: Master Yi e Warwick.</ul>
+<ul>Mid Lane (Rota do Meio): A alma do mapa, oferecendo acesso rápido a todas as outras áreas. Magos e assassinos geralmente dominam essa rota, como Veigar e Yasuo.</ul>
+<ul>Bot Lane (Rota Inferior): Dividida entre o atirador (ADC) e o suporte (SUP), é essencial para o controle do Dragão. Exemplos de atiradores e suportes: Atiradores: Caitlyn e Miss Fortune; Suportes: Soraka e Rakan.</ul>
+<p>Pense na rota que ira jogar e treine com os campeões que lhe agradar contra os bots, assunto que iremos tratar no prómixo tópico.
+<h2>Treine com Bots antes de ir para o Multiplayer</h2>			
+<p>Eu sei que pode parecer chato ter que ficar jogando com bots e que é muito fácil e rápido ganhar partidas,</p>
+<p>mas acredite em mim, treinar com eles pode te ajudar e muito a melhorar as suas técnicas independente do campeão que estiver usando.</p>
+<p>Você também pode usar as partidas contra bots para testar builds e para testar um campeão que você nunca jogou, da até pra se aquecer jogando contra eles.</p>
+<p>Por exemplo, entre em uma partida contra bots em algum momento, você vai ver que, se for sua primeira partida, você irá estar aquecido pois você ja jogou e esta com os comandos na cabeça, facilitando assim você ganhar a partida.</p>
+<p>Ja se você for começar a jogar com um campeão que você nunca jogou ou deseja melhorar com um que você ja joga, você pode treinar com os bots para esta finalidade, ja que terá tempo para ler e testar as habilidade do boneco, aprendendo a usa-las de um jeito melhor.</p>
+<p>Observe os pontos positivos e negativos em uma lista: </p>
+<table border="2"> 
+<caption> Treino com Bots </caption>
+<thead>
+	<tr>
+		<th> Pontos Positivos </th>
+		<th> Pontos Negativos </th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td> Aquecer os movimentos </td>
+		<td> Jogar com eles pode ser muito chato por ser fácil demais </td>
+	</tr>
+	<tr>
+		<td> Aprender a jogar com campeões novos</td> 
+		<td> A partida pode acabar muito rápido, não dando tempo de testar alguma build</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td> Melhorar suas habilidades com algum campeâo que ja joga </td>
+		<td></td>
+	</tr>
+</tbody>
+<tfoot>
+<tr><td colspan="3">Dito isso, tire um tempinho se precisar para relembrar alguns conceitos deste tópico, se não precisar, bora ver alguns conceitos!!!!</td></tr>
+</tfoot>
+</table>
+<br/>
+<br/>
+<br/>
+<h2> Primeiro conceito: Zonear seu Adversário </h2>
+<p>Zonear no League of Legends significa controlar uma zona específica do mapa.</p>
+<p>Quando você utiliza itens ou habilidades para ter o controle sobre uma parte do terreno, está zoneando.</p> 
+<p>Essa tática pode impedir ou desencorajar que inimigos entrem nessa área.</p>
+<p>Treine este conceito pois ele será utilizado para executar o Freezing, assunto que será tratado em outro momento.</p>
+<br/>
+<h2> Segundo conceito: Caiting (ou Caitar) </h2>
+<p>No jogo, “caitar” é uma prática bastante usada, principalmente por jogadores que escolhem campeões atiradores. O termo “caitar” vem do inglês “Kiting”.</p>
+<p>Na terminologia dos jogos, “caitar” é o ato de dar um ataque básico e andar logo na sequência. O objetivo é dar dano em uma troca, ao mesmo tempo que mantém sua distância do adversário.</p>
+<p>Essa é uma mecânica ótima para campeões atiradores, ou seja, que batem à distância com seus ataques básicos, ou aqueles que possuem habilidades de dano com baixo Tempo de Recarga.</p>
+<p>Vale frisar que o kiting se torna melhor e mais rápido, conforme o campeão possui itens que aumentam sua velocidade de ataque.</p>
+<p>Existem diferentes maneiras de caitar no LoL. A forma mais básica, mas também a menos efetiva, é clicar no campeão ou alvo inimigo e depois no chão, assim por diante.</p>
+<p>Uma maneira um pouco mais complexa, mas também bastante eficiente, é usar as teclas A ou Shift do teclado.</p>
+<video src="Videos/Kiting.mp4"
+width="500"
+controls
+muted loop
+>
+</video>
+<h5>"Eu treinando Kiting contra os bots."</h5>
+<h4> Resumindo: </h4>
+<ul> . Caitar vem do inglês "Kiting" e é usado principalmente por atiradores; </ul>
+<ul> . Caitar é o ato de dar ataque básico e andar logo em sequência, com o objetivo de dar dano em troca ao mesmo tempo que mantém sua distância do adversário; </ul>
+<ul> . Caitar se torna mais rápido conforme o campeão sobe de nível e compra itens; </ul>
+<ul> Existem duas formas de caitar, que são: </ul>
+<ul> . A mais básica, porém menos efetiva, que é clicar no campeão ou alvo inimigo e depois no chão; </ul>
+<ul> . E a maneira mais complexa, porém mais eficiente, que é usar as teclas A ou Shift do teclado. </ul>
+</br>
+<p> Tire um tempinho para rever estes conceitos e para treinar um pouco se necessário, mas se não precisar, bora pro próximo!!! </p>
+</br>
+</br>
+<h2>Terceiro conceito: Last Hit (ou Caitar, como é conhecido) </h2>
+<p>No jogo League of Legends, o conceito de “last hit” refere-se à ação de dar o golpe final em um minion (criatura do jogo) ou inimigo para receber ouro e experiência.</p>
+<p>É uma habilidade importante para acumular recursos e se fortalecer durante o jogo. </p>
+</br>
+<p>Para praticar o “last hit”, é importante observar a barra de vida dos minions e sincronizar seus ataques para que o seu golpe seja o que efetivamente os elimine.</p>
+<p>Isso geralmente envolve controlar a força do seu ataque e o tempo, considerando a velocidade do seu ataque e a dos minions aliados.</p>
+<p>Estrategicamente, o “last hit” é crucial porque permite ao jogador acumular ouro e experiência sem empurrar demais a linha de frente, o que poderia deixá-lo vulnerável a ataques inimigos.</p>
+<p>Além disso, dominar o “last hit” pode garantir uma vantagem econômica sobre o adversário, permitindo comprar itens mais poderosos mais rapidamente.</p>
+<p>Praticar em jogos contra o computador ou em partidas personalizadas pode ajudar a melhorar essa habilidade. Estarei deixando no topo da Página um jogo para você conseguir treinar o Last Hit. Entre lá, treine bastante e se divirta!!!</p>
+</br>
+<p>Para começar a praticar o “last hit”, aqui estão algumas dicas:</p>
+<img src="Fotos/Ezreal.jpg"alt="Ezreal" width=200 height=200 />
+<ul><strong>1.Conheça seu campeão:</strong>Cada campeão tem velocidades de ataque e danos diferentes. Pratique com o campeão que você mais joga para entender melhor o tempo de seus ataques.</ul>
+<ul><strong>2.Observe os padrões de ataque dos minions:</strong>Minions atacam em padrões previsíveis. Aprenda a reconhecer esses padrões para antecipar quando um minion estará com pouca vida.</ul>
+<ul><strong>3.Use habilidades se necessário:</strong>Alguns campeões têm habilidades que facilitam o “last hit”, por exemplo o Q do Ezreal. Não tenha medo de usá-las, especialmente se elas ajudarem a garantir vários “last hits” de uma vez.</ul>
+<ul><strong>4.Pratique, pratique, pratique:</strong>A melhor maneira de melhorar é praticando. Dedique um tempo em cada sessão de jogo para focar apenas em melhorar seu “last hit”.</ul>
+<ul><strong>5.Assista e aprenda:</strong>Veja vídeos de jogadores experientes e observe como eles fazem o “last hit”. Tente replicar as técnicas que eles usam.</ul>
+<video src="Videos/Last Hit.mp4"
+width="500"
+controls
+muted loop
+>
+</video>
+<h5>"Eu treinando Last Hit com o personagem Ezreal, que contém uma habilidade na qual é o Q que o ajuda a fazer o last hit"</h5>
+</br>
+<p>Com o tempo e a prática, você vai melhorar sua precisão e timing, tornando-se mais eficiente em acumular recursos no jogo. Portanto, tire sempre que puder um tempinho para treiná-lo, quando estiver sentindo que está fazendo ele corretamente, leia os próximos conceitos, agora se ja tiver o treinado, bora pro próximo!!</p>
+<h4>Por enquanto é só estes conceitos que serão expostos nesta página, conforme o tempo for passando, eu irei atualizando o site e colocando novos conceitos, mas por enquanto é só.
+Porém ainda não acabou, na próxima página irei tratar de alguns conceitos mais complexos, Preparado?! Então vamos nessa !!</h4> 
+</section>
+
+<aside>
+<h3>Visite Também:</h3>
+	<p> </p>
+<h4>Andrômeda Eventos</h4>
+	<p> </p>
+<h4>Sheets para Piano Virtual</h4>
+
+<p>
+<h4>Resumo de Livros</h4>
+</p>
+</aside>
+
+<footer>
+DESENVOLVERDOR: Samuel Moreira Dias dos Reis
+</footer>
+
+</body>
+</html>

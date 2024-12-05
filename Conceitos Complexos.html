@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="Estilo 3 Sites.css">
+   <title>League School</title>
+  </head>
+<body>
+
+  <div class="hero-background"></div>
+  
+  <script>
+    // Criando o cursor personalizado (espada do Viego)
+    const cursor = document.createElement("div");
+    cursor.classList.add("cursor");
+    document.body.appendChild(cursor);
+
+    // Função para atualizar a posição do cursor e gerar as partículas
+    document.addEventListener("mousemove", function (e) {
+        // Atualiza a posição da espada
+        cursor.style.left = `${e.pageX}px`;
+        cursor.style.top = `${e.pageY}px`;
+
+        // Criando as partículas (essência azul estilo LoL) que saem do cabo da espada
+        let particle = document.createElement("div");
+        particle.classList.add("particle");
+
+        // Ajuste para as partículas saírem do cabo da espada
+        particle.style.left = `${e.pageX + 30}px`; // Ajuste horizontal para o centro da espada
+        particle.style.top = `${e.pageY + 18}px`; // Ajuste vertical para sair do cabo da espada (parte inferior)
+
+        document.body.appendChild(particle);
+
+        // Remover a partícula após a animação
+        setTimeout(() => {
+            particle.remove();
+        }, 1000); // Duração de 1 segundo
+    });
+</script>
+
+<header>
+<h1>Conceitos um pouco mais complexos</h1>
+</header>
+        
+<nav>
+<p></p>
+<a href="Tela Principal-LOL.html" class="btn" id="btn">Tela Principal</a>
+<p></p>
+</nav>
+
+<section>
+<p>Na página anterior, vimos sobre alguns conceitos básicos do Lol, conceitos que são fáceis de aprender e de executar, agora, vamos</p>
+<p>aprender sobre alguns conceitos mais complexos, como por exmplo Backdoor e Juke. Vamos lá ?</p>
+</br>
+<h2>Primeiro Conceito: Backdoor</h2>
+</br>
+<p>O termo “Backdoor” (ou BD) é comumente usado para descrever uma estratégia onde um ou mais membros da equipe tentam atacar as estruturas da base inimiga,</p>
+<p>como torres, inibidores ou até mesmo o Nexus, sem o apoio de ondas de minions aliados. Em outras palavras, fazer um backdoor significa entrar sorrateiramente na base inimiga sem ter empurrado a rota primeiro, ou seja, sem ter o auxílio dos minions(tropas).</p>
+<p>A vantagem dessa estratégia reside no elemento surpresa. Por exemplo, um aliado pode entrar e ameaçar a base inimiga passando pela selva, enquanto o resto da equipe aliada distrai ou pressiona a equipe adversária a tomar uma decisão rápida</p> 
+<p>durante um objetivo importante, como o Barão Nashor e o Dragão (que estão longe da base) e/ou impede recalls (voltar a base) dos inimigos.</p>
+</br>
+<p>Os jogadores têm a oportunidade de perceber quando uma rota está sendo empurrada ao lado das ondas de minions e, portanto, podem potencialmente se mover para defendê-la antes que o inimigo alcance uma estrutura;</p>
+<p>o backdoor, por outro lado, especialmente se o inimigo não tem visão no caminho que os aliados que estão fazendo o backdoor tomaram, pode permitir que uma equipe derrube estruturas, como um inibidor, por exemplo, antes que a equipe defensora tenha a chance de reagir.</p>
+</br>
+<p>Existem algumas mecânicas que dão maiores chances e uma maneira mais fácil de entrar sorrateiramente na base adversária, e alguns campeões as possuem, como:</p>
+<p></p>  
+<ul> .Ser capaz de pular sobre a parede da base inimiga (por exemplo, o Caminho do Assassino do Talon(E), o Dash Sombrio do Shen(E), o Passo Dimensional do Kassadin(R).)</ul>
+<ul> .Acelerar para a base com velocidade de movimento excepcionalmente alta (por exemplo, a Investida Imparável do Sion(R), o Investida Ardente do Udyr(E))</ul>
+<ul> .Ter acesso a camuflagem para evitar a detecção de sentinelas (por exemplo, a Rebeldia do Akshan(W), a Emboscada do Twitch(Q))</ul>
+<ul> .Um teleporte global ou quase global (por exemplo, Teleporte em uma sentinela não detectada(Usando o feitiço Teleporte), o Destino do Twisted Fate(R), a Queda Estelar Grande do Pantheon(R))</ul>
+<ul> .Bem como ter acesso a danos enormes de derrubada de estruturas (por exemplo, Veigar com grandes quantidades de AP no final do jogo, o passivo do Shapesplitter da Neeko, a Ferocidade do Rengar, etc.)</ul>
+</br>
+<p>Se uma equipe suspeita que o inimigo pode tentar um backdoor, eles podem deixar um ou mais campeões para emboscar os atacantes, pois estar sozinho no território inimigo pode ser muito perigoso,</p>
+<p>especialmente se os campeões não têm habilidades de fuga</p>
+<video src="Videos/Backdoor.mp4"
+width="500"
+controls
+muted loop
+>
+</video>
+<h5>"Eu executando o backdoor na base inimiga."</h5>
+</br>
+<h4>Resumindo:</h4>
+<ul> . O Backdoor é o ato em que um ou mais membros da equipe tentam atacar estruturas da base inimiga, como inibidores;</ul>
+<ul> . A vantagem dessa estratégia reside no elemento surpresa;</ul>
+<ul> . Caso a equipe inimiga não tenha visão do caminho que seu time está utiizando, o backdoor pode ser muito efetivo para destruir estruturas, como inibidores ou até o Nexus;</ul>
+<ul> . Existem algumas mecânicas que possibilitam uma execução mais fácil do backdoor, como o R do Twisted Fate e ou o E do Talon.</ul>
+</br>
+<p>Tire um tempinho se precisar ler sobre o backdoor novamente, mas se não precisar, bora pro próximo!!!</p>
+</br>
+</br>
+<h2>Segundo Conceito: Freezing</h2>
+<p>Freezar no League of Legends é uma técnica utilizada para manter a lane parada.</p> 
+<p>Essa estratégia envolve manipular os minions de forma a estabilizar a posição em que a wave de minions do seu time e a wave do time adversário colidem.</p>
+<p>O objetivo é manter o mesmo número de tropas do time adversário e do seu time, criando um equilíbrio. Por exemplo, se na wave adversária existem 10 minions e na sua wave existem 6 minions, você pode matar 4 minions adversários rapidamente para tentar estabilizar a wave nessa posição.</p>
+<p>Isso é uma forma genérica de freezar a lane.</p>
+<p>Agora uma técnica específica para puxar a wave na sua direção e depois freezar ela mais próxima da sua torre é conhecida como “Freeze na Side Brush”. 
+<h4>Aqui estão os passos para aplicá-la:<h4>
+<span>
+<ul>1º: Posicione-se antes da wave chegar: Antes das tropas chegarem, posicione-se para tanka-las. Assim que elas agruparem para te atacar, ande em direção ao brush (arbusto) e perca o agro. Isso mudará a formação delas para um cone, fazendo com que todos ataquem a mesma tropa do seu time.</ul>
+<ul>2º: Desloque a wave na direção da sua torre: Ao fazer isso, os seus minions morrerão mais rápido e a wave se deslocará na direção da sua torre.</ul>
+<ul>3º: Equilibre o número de minions: Ao chegar na posição desejada para freezar, basta equilibrar o número de minions. Lembre-se de dominar o Last Hit (acertar o último golpe nos creeps) antes de aprender a freezar a lane, caso contrário, ela voltará a puxar na direção do time adversário.</ul>
+<video src="Videos/Freezing.mp4"
+width="500"
+controls
+muted loop
+>
+</video>
+<h5>"Eu treinando Freezing contra os bots"</h5>
+<p>O freeze também é eficiente quando você quer zonear o adversário, colocando-o em uma posição desconfortável para farmar, ou quando deseja se manter seguro contra ganks.</p>
+</span>
+<h4> Resumindo: </h4>
+<ul> .Freezar no League of Legends é uma técnica utilizada para manter a lane parada;</ul>
+<ul> .Essa estratégia envolve manipular as tropas de forma a estabilizar a posição em que a wave de minions do seu time e a wave do time adversário colidem, com o objetivo de colocar o seu adversário em uma posição desfavorável para farmar, enquanto te mantém seguro contra ganks;</ul>
+<ul> .Também contém uma forma específica para freezar minions, que se chama "Freeze na Side Brush";</ul>
+<ul> .Esta técnica contém três etapas, que são: Tankar os minions; perder o agro dos minions entrando na Brush (mato ou moita); deslocar os minions até uma posição favorável para você; manter(equilibrar) os minions nessa posição utilizando o Last Hit.</ul>
+</br>
+<p>Tire um tempinho para ler novamente sobre o freezing o treina-lo, mais se não precisar, bora pro próximo!!</p>
+</br>
+</br>
+<h2>Terceiro Conceito: Juke (ou Juking)</h2>
+<p>“Juke” é um termo usado para descrever a ação de enganar ou confundir o adversário através de movimentos e habilidades evasivas. Aqui estão alguns detalhes sobre o que envolve um “Juke”:</p>
+<p><strong>. Evasão de Ataques:</strong> Juking envolve a evasão de ataques ou habilidades inimigas, seja através de movimentos rápidos e imprevisíveis, ou usando habilidades de dash (deslocamento rápido) para se mover rapidamente.</p>
+<p><strong>. Enganação:</strong> O objetivo do Juke é enganar o adversário, fazendo-o acreditar que você está indo em uma direção, quando na verdade você está planejando ir em outra.</p>  
+<p><strong>. Uso de Habilidades:</strong> Algumas habilidades dos campeões podem ser usadas para realizar um Juke. Por exemplo, habilidades que permitem ao campeão se tornar invisível, ou que reduzem a visão do inimigo, podem ser usadas para enganar o adversário.</p>
+<p><strong>. Escapar de Situações Perigosas:</strong> Juking é uma habilidade crucial para evitar danos, escapar de situações perigosas e enganar os adversários durante os confrontos.</p>
+<p><strong>. Uso do Terreno:</strong> O terreno do mapa pode ser usado para realizar um Juke. Por exemplo, entrar e sair de arbustos pode confundir o inimigo e permitir que você escape.</p> 
+<p><strong>. Desvio de Skillshots:</strong> Juking também pode se referir a desviar de um skillshot perigoso, como a Flecha de Cristal Encantada da Ashe(R). Um jogador que espera a flecha pode tentar se mover de um lado para o outro ou usar uma habilidade de dash para desviá-la. Isso é frequentemente chamado de Juke bem-sucedido.</p> 
+<h4>Resumindo:</h4>
+<ul>. Juke é o ato de confundir ou enganar o adversário utilizando movimentos ou habilidades evasivas;</ul>
+<ul>. O Juke é dividido em seis partes, que são: Evasão de Ataques, Enganação, Uso de Habilidades, Escapar de situações perigosas, Uso do Terreno e Desvio de Skillshots.</ul>
+</br>
+<p>Tire um tempinho para rever os conceitos de Juke e treiná-los, pois na próxima página falaremos sobre mais alguns conceitos complexos, Preparado?! Vamos Nessa!!</p> 
+</section>
+
+<aside>
+  <h3>Visite Também:</h3>
+	<p> </p>
+<h4>Andrômeda Eventos</h4>
+    <p> </p>
+  <h4>Sheets para Piano Virtual</h4>
+  
+  <p>
+	<h4>Resumo de Livros</h4>
+  </p>
+  </aside>
+  
+  <footer>
+  Desenvolvedor: Samuel Moreira Dias dos Reis
+  </footer>
+  
+  </body>
+  </html>
